@@ -11,77 +11,46 @@ A backend application for an AI-powered Resume Screener built using FastAPI, Pos
 - Alembic
 - Uvicorn
 
-## Progress
+## Progress Recap
 
-### Phase 1: Setup & Foundation
+### Day 1: FastAPI + Git Setup
+- Set up the FastAPI project structure and configured the development environment.
+- Initialized a Git repository and established version control.
 
-- Set up Python virtual environment
-- Installed FastAPI, Uvicorn, SQLAlchemy, and Psycopg2
-- Created the project structure
-- Built and tested the initial FastAPI application
-- Initialized the Git repository
-- Designed the database schema
-- Created SQLAlchemy models
-- Configured and executed Alembic migrations
-- Connected the application to PostgreSQL
+### Day 2: Database Schema
+- Designed the database schema for candidates, jobs, and applications.
+- Connected the backend to the database using SQLAlchemy ORM.
 
-### Phase 2: Core Backend
+### Day 3: CRUD APIs for Candidates & Jobs
+- Developed REST APIs for managing candidate records.
+- Implemented CRUD operations for job postings with input validation.
 
-#### Day 3 – CRUD APIs
+### Day 4: Resume Upload + PDF Extraction
+- Added resume upload functionality with file validation.
+- Extracted text from uploaded PDF resumes for processing.
 
-- Implemented Candidate CRUD APIs
-- Implemented Job CRUD APIs
-- Tested all endpoints using Postman
+### Day 5: LLM-Based Resume Scoring
+- Integrated an LLM to evaluate resumes against job descriptions.
+- Generated resume scores and feedback based on matching criteria.
 
-## Database Schema
+### Day 6: Applications + Interview Slot Endpoints
+- Built APIs for job application management.
+- Created endpoints for scheduling and managing interview slots.
 
-### Candidates
-- id
-- name
-- email
-- resume_text
-- skills
+### Day 7: React Frontend with Routing
+- Set up the React application with client-side routing.
+- Developed core pages and navigation components.
 
-### Jobs
-- id
-- title
-- description
-- required_skills
+### Day 8: Frontend Connected to Backend
+- Integrated the frontend with FastAPI REST APIs.
+- Implemented dynamic data fetching and API error handling.
 
-### Applications
-- id
-- candidate_id
-- job_id
-- score
-- status
+### Day 9: Applications Dashboard with Live Scoring UI
+- Built a dashboard to track applications and their status.
+- Displayed live resume scoring results through an interactive UI.
 
-### InterviewSlots
-- id
-- application_id
-- datetime
-- status
 
-## Running the Project
 
-```bash
-pip install -r requirements.txt
 
-uvicorn main:app --reload
-```
 
-## Current Status
 
-Completed:
-- Project setup
-- PostgreSQL integration
-- Database design
-- SQLAlchemy models
-- Alembic migrations
-- Candidate CRUD APIs
-- Job CRUD APIs
-
-Upcoming:
-- Applications CRUD APIs
-- Interview Slot Management
-- AI Resume Matching
-- Authentication & Authorization
